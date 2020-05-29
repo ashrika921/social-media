@@ -8,14 +8,12 @@ async function createAnonUser() {
 
   return user
 }
-
 async function getUserById(id) {
-  if (!id) throw new Error('user id not provided')
-  if (typeof id !== 'number') throw new Error('user id should be integer')
-  
+   if (!id) throw new Error('user id not provided')
+/*  if (typeof id !== 'number') throw new Error('user id should be integer')  */
+
   return await Users.findOne({ where: { id } })
 }
-
 async function getUserByUsername(username) {
   return await Users.findOne({ where: { username } })
 }
@@ -38,5 +36,5 @@ async function task () {
     console.log(await createAnonUser())
     console.log('---------------------')
 }
-task() 
+task()
 */

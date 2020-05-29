@@ -1,19 +1,19 @@
 const Sequelize = require('sequelize')
 
-  let db
+ let db
 if (process.env.NODE_ENV == 'testing') {
   db = new Sequelize({
     dialect: 'sqlite',
-    storage: __dirname +'/../../test/test.db',
+    storage: __dirname + '/../../test/test.db',
   })
-} else {
+} else {   
   db = new Sequelize({
     dialect: 'mysql',
     database: 'cbsocialmediadb5',
     username: 'cbsocialuser5',
     password: 'cbsocialpass5',
   })
-}
+ } 
 const COL_ID_DEF = {
   type: Sequelize.DataTypes.INTEGER,
   autoIncrement: true,

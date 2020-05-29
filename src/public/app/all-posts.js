@@ -9,7 +9,7 @@ function loadPosts() {
               <h5 class="card-title">${p.title}</h5>
               <h6 class="card-subtitle mb-2 text-muted">${p.user.username}</h6>
               <p class="card-text">
-                ${p.body.substr(0, 200)}
+                ${p.body.substr(0, 200)} 
                 <a href="#">...read more</a>
               </p>
               <a href="#" class="card-link">Comment</a>
