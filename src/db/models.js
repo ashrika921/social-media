@@ -6,14 +6,14 @@ if (process.env.NODE_ENV == 'testing') {
     dialect: 'sqlite',
     storage: ':memory:',
   })
-} else {   
+} else {
   db = new Sequelize({
     dialect: 'mysql',
     database: 'cbsocialmediadb5',
     username: 'cbsocialuser5',
     password: 'cbsocialpass5',
   })
- } 
+ }
 const COL_ID_DEF = {
   type: Sequelize.DataTypes.INTEGER,
   autoIncrement: true,
