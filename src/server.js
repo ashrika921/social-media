@@ -16,7 +16,7 @@ app.use('/', express.static(__dirname + '/public'))
 db.sync({alter:true})
   .then(() => {
     app.listen(PORT, () => {
-      console.log('server started on http://localhost:${PORT}')
+      console.log(`server started on http://localhost:${PORT}`)
     })
   })
  /* .catch((err) => {
