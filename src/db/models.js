@@ -7,18 +7,22 @@ if (process.env.NODE_ENV == 'testing') {
     storage: ':memory:',
   })
 } else {
+  if(process.env.DATABASE_URL){
+    db = new Sequelize(process.env.DATABASE_URL)
+  }else{
   db = new Sequelize({
-   /* dialect: 'mysql',
+    dialect: 'mysql',
     database: 'cbsocialmediadb5',
     username: 'cbsocialuser5',
-    password: 'cbsocialpass5',  */
-    dialect: 'postgres',
+    password: 'cbsocialpass5',  
+   /* dialect: 'postgres',
     database: 'd9mu0ds3h8it67',
     username: 'muhasxjdljshbr',
     password: '0107c4672e0576145335d701ce23e5e99afa165a70ff28d386836f0b064d6ed4',
-    host: 'ec2-35-174-127-63.compute-1.amazonaws.com'
+    host: 'ec2-35-174-127-63.compute-1.amazonaws.com' */
   })
- }
+ } 
+}
 const COL_ID_DEF = {
   type: Sequelize.DataTypes.INTEGER,
   autoIncrement: true,
