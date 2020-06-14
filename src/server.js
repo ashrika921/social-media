@@ -19,7 +19,7 @@ db.sync({alter:true})
       console.log('server started on http://localhost:${PORT}')
     })
   })
-  .catch((err) => {
+ /* .catch((err) => {
     console.error(new Error('Could not start database'))
     console.error(err)
-  })
+  })  */
